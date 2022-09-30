@@ -1,0 +1,20 @@
+.form-add-book {
+  display: flex;
+  width: 90vw;
+  height: 35px;
+  padding: 50px;
+  justify-content: center;
+  column-gap: 20px;
+}
+
+.input-book {
+  width: 35vw;
+}
+
+.select-book {
+  width: 100px;
+}
+
+/* .submit {
+
+} */

@@ -1,0 +1,47 @@
+.book-container {
+  display: flex;
+  width: 90vw;
+  height: auto;
+  padding: 22px;
+  margin: 15px;
+  justify-content: space-around;
+  background-color: white;
+  box-shadow: 1px 1px 5px #d3d3d3;
+}
+
+.book-container:hover {
+  scale: 1.005;
+  box-shadow: 2px 2px 8px #b3b3b3;
+}
+
+.info-div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 500px;
+}
+
+.completed-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+}
+
+.progress-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+}
+
+.book-info {
+  padding-left: 30px;
+}
+
+.functions {
+  display: flex;
+  padding-left: 30px;
+  column-gap: 10px;
+}

@@ -1,0 +1,21 @@
+.navbar {
+  display: flex;
+  margin-left: 100px;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  column-gap: 60px;
+}
+
+.nav-item {
+  list-style: none;
+}
+
+.link-nav {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+}
