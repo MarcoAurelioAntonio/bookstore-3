@@ -58,5 +58,5 @@ export default function CircularStatic() {
     };
   }, []); */
 
-  return <CircularProgressWithLabel value={60} />;
+  return <CircularProgressWithLabel value={55} />;
 }
