@@ -6,7 +6,9 @@ import Comments from './Comments';
 import Edit from './Edit';
 import '../styles/Book.css';
 
-function Book({ author, title, category/* , value */ }) {
+function Book({
+  author, title, category, value,
+}) { // Asi lo quiso don linter.
   return (
     <div className="book-container">
       <div className="info-div">
@@ -23,7 +25,7 @@ function Book({ author, title, category/* , value */ }) {
           <Edit />
         </div>
       </div>
-      <div className="completed-div"><CircularStatic /* variant="determinate" value={value} */ /></div>
+      <div className="completed-div"><CircularStatic value={value} /></div>
       <div className="progress-div">progress</div>
     </div>
   );
@@ -33,7 +35,7 @@ Book.propTypes = {
   author: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   category: PropTypes.string.isRequired,
-  /* value: PropTypes.number.isRequired, */
+  value: PropTypes.number.isRequired,
 };
 
 export default Book;

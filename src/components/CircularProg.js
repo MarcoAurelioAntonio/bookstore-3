@@ -8,7 +8,7 @@ import '../styles/CircularProg.css';
 function CircularProgressWithLabel({ value }) {
   return (
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress variant="determinate" size={70} thickness={5} value={60} color="primary" className="foreground" />
+      <CircularProgress variant="determinate" size={70} thickness={5} value={value} color="primary" className="foreground" />
       <CircularProgress
         variant="determinate"
         value={100}
@@ -46,7 +46,7 @@ CircularProgressWithLabel.propTypes = {
   value: PropTypes.number.isRequired,
 };
 
-export default function CircularStatic() {
+export default function CircularStatic({ value }) {
   /* const [progress, setProgress] = React.useState(10); */
 
   /* React.useEffect(() => {
@@ -58,5 +58,14 @@ export default function CircularStatic() {
     };
   }, []); */
 
-  return <CircularProgressWithLabel value={55} />;
+  return <CircularProgressWithLabel value={value} />;
 }
+
+CircularStatic.propTypes = {
+  /**
+   * The value of the progress indicator for the determinate variant.
+   * Value between 0 and 100.
+   * @default 0
+   */
+  value: PropTypes.number.isRequired,
+};
