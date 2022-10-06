@@ -7,7 +7,7 @@ export const addBook = (payload) => ({ type: ADD_BOOK, payload });
 export const removeBook = (payload) => ({ type: REMOVE_BOOK, payload });
 
 // Reducer
-const initialState = [];
+const initialState = ['Beyond Good and Evil', 'The Will to Power', 'Twilight of the Idols/The Anti-Christ', 'The Genealogy of Morals'];
 export default function booksReducer(state = initialState, action) {
   switch (action.type) {
     case ADD_BOOK:
