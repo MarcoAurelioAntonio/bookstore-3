@@ -1,4 +1,17 @@
 .check-container {
-  width: 200px;
-  margin-left: 500px;
+  position: relative;
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 50px;
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+}
+
+.chek-button {
+  width: 500px;
+  height: 35px;
+  font-size: 20px;
 }

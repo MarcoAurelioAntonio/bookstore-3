@@ -1,26 +1,33 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useDispatch } from 'react-redux';
+import { removeBook } from '../redux/books/book';
 import CircularStatic from './CircularProg';
-import Remove from './Remove';
+/* import Remove from './Remove'; */
 import Comments from './Comments';
 import Edit from './Edit';
 import '../styles/Book.css';
 
-function Book({
-  author, title, category, value,
-}) { // Asi lo quiso don linter.
+function Book({ book, value }) {
+  const dispatch = useDispatch();
+
+  const remBook = (e) => {
+    const { id } = e.target;
+    dispatch(removeBook({ id }));
+  };
+
   return (
     <div className="book-container">
       <div className="info-div">
         <div className="book-info">
-          <p>{category}</p>
-          <h3>{title}</h3>
-          <p>{author}</p>
+          <p>{book.category}</p>
+          <h3>{book.title}</h3>
+          <p>{book.author}</p>
         </div>
         <div className="functions">
           <Comments />
           <span>|</span>
-          <Remove />
+          <button type="button" id={book.id} onClick={remBook}>Remove</button>
           <span>|</span>
           <Edit />
         </div>
@@ -32,10 +39,14 @@ function Book({
 }
 
 Book.propTypes = {
-  author: PropTypes.string.isRequired,
-  title: PropTypes.string.isRequired,
-  category: PropTypes.string.isRequired,
   value: PropTypes.number.isRequired,
+
+  book: PropTypes.shape({
+    id: PropTypes.string,
+    title: PropTypes.string,
+    author: PropTypes.string,
+    category: PropTypes.string,
+  }).isRequired,
 };
 
 export default Book;
