@@ -16,6 +16,7 @@ export const fetchBooks = () => async (dispatch) => {
       Object.keys(books).forEach((key) => {
         bookList.push({
           item_id: key,
+          id: key,
           author: books[key][0].author,
           title: books[key][0].title,
           category: books[key][0].category,

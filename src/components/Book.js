@@ -10,8 +10,8 @@ import '../styles/Book.css';
 function Book({ book, value }) {
   const dispatch = useDispatch();
 
-  const remBook = (e) => {
-    const { id } = e.target;
+  const remBook = (event) => {
+    const { id } = event.target;
     dispatch(removeBookFetch(id));
   };
 
