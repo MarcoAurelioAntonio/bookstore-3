@@ -1,9 +1,12 @@
 .book-container {
   display: flex;
-  width: 90vw;
+  width: 70vw;
   height: auto;
   padding: 22px;
-  margin: 15px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  margin-left: auto;
+  margin-right: auto;
   justify-content: space-around;
   background-color: white;
   box-shadow: 1px 1px 5px #d3d3d3;
