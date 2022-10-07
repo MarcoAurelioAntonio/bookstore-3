@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/book';
+import { removeBookFetch } from '../redux/books/book';
 import CircularStatic from './CircularProg';
 import Comments from './Comments';
 import Edit from './Edit';
@@ -12,7 +12,7 @@ function Book({ book, value }) {
 
   const remBook = (e) => {
     const { id } = e.target;
-    dispatch(removeBook({ id }));
+    dispatch(removeBookFetch(id));
   };
 
   return (
