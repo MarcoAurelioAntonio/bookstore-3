@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/book';
 import CircularStatic from './CircularProg';
-/* import Remove from './Remove'; */
 import Comments from './Comments';
 import Edit from './Edit';
 import '../styles/Book.css';
