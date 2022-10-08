@@ -43,5 +43,11 @@
 }
 
 .submit {
+  font-family: inherit;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #0290ff;
   width: 100px;
+  cursor: pointer;
 }

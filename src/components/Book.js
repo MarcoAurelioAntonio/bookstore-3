@@ -26,13 +26,17 @@ function Book({ book, value }) {
         <div className="functions">
           <Comments />
           <span>|</span>
-          <button type="button" id={book.id} onClick={remBook}>Remove</button>
+          <button className="remove-btn" type="button" id={book.id} onClick={remBook}>Remove</button>
           <span>|</span>
           <Edit />
         </div>
       </div>
       <div className="completed-div"><CircularStatic value={value} /></div>
-      <div className="progress-div">progress</div>
+      <div className="progress-div">
+        <p className="comp">CURRENT CHAPTER</p>
+        <p>Chapter 15</p>
+        <button className="update" type="button">UPDATE PROGRESS</button>
+      </div>
     </div>
   );
 }

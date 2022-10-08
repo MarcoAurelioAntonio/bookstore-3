@@ -8,14 +8,14 @@ import '../styles/CircularProg.css';
 function CircularProgressWithLabel({ value }) {
   return (
     <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-      <CircularProgress variant="determinate" size={70} thickness={5} value={value} color="primary" className="foreground" />
+      <CircularProgress variant="determinate" size={120} thickness={5} value={value} color="secondary" className="foreground" />
       <CircularProgress
         variant="determinate"
         value={100}
         className="background"
         thickness={5}
-        color="secondary"
-        size={70}
+        color="primary"
+        size={120}
       />
       <Box
         sx={{
