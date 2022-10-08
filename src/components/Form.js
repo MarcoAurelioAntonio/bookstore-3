@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { useDispatch } from 'react-redux';
-import { addBook } from '../redux/books/book';
+import { addBookFetch } from '../redux/books/book';
 import '../styles/Form.css';
 
 export default function Form() {
@@ -33,7 +33,7 @@ export default function Form() {
     setTitle('');
     setCategory('');
     setAuthor('');
-    dispatch(addBook(newBook));
+    dispatch(addBookFetch(newBook));
   };
 
   return (
