@@ -1,5 +1,11 @@
-.book-container {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.flex {
   display: flex;
+}
+
+.book-container {
   width: 70vw;
   height: auto;
   padding: 22px;
@@ -11,6 +17,7 @@
   background-color: white;
   box-shadow: 1px 1px 5px #d3d3d3;
   align-items: center;
+  font-family: "Roboto Slab", serif;
 }
 
 .book-container:hover {
@@ -19,30 +26,47 @@
 }
 
 .info-div {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
   width: 500px;
 }
 
+.tit {
+  font-size: 30px;
+  margin: 0;
+}
+
+.cat {
+  color: rgb(129, 127, 127);
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.aut {
+  color: rgb(166, 198, 225);
+  margin-top: 5px;
+}
+
 .completed-div {
   border-right: inset;
   height: 120px;
-  display: flex;
   align-items: center;
   justify-content: center;
   width: 500px;
+  padding-left: 100px;
 }
 
 .progress-div {
-  display: flex;
   flex-direction: column;
   row-gap: -10px;
-  align-items: center;
-
-  /* justify-content: center; */
+  align-items: flex-start;
   width: 500px;
+  padding-left: 50px;
+}
+
+.progress-div-1 {
+  margin-left: 50px;
 }
 
 .book-info {
@@ -50,9 +74,16 @@
 }
 
 .functions {
-  display: flex;
   padding-left: 30px;
   column-gap: 10px;
+  color: rgb(166, 198, 225);
+  align-items: baseline;
+}
+
+.functions span {
+  color: black;
+  font-size: 20px;
+  font-weight: 200;
 }
 
 .update {
@@ -63,14 +94,24 @@
   border-radius: 3px;
   background-color: #0290ff;
   cursor: pointer;
+  width: 225px;
+  margin-top: 15px;
 }
 
 .comp {
   color: rgb(175, 173, 173);
+  margin-bottom: -10px;
 }
 
 .remove-btn {
   background-color: white;
   border: none;
   cursor: pointer;
+  color: rgb(166, 198, 225);
+  font-size: 15px;
+  font-family: "Roboto Slab", serif;
+}
+
+.sub-completed-div {
+  margin-left: 15px;
 }
