@@ -1,3 +1,4 @@
+import { createAsyncThunk } from '@reduxjs/toolkit';
 // URL API
 const URL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi';
 const URLid = '/apps/tdUGvbgxfHyC017dl4Kz/books';
@@ -8,7 +9,7 @@ const FETCH_BOOK = 'FETCH_BOOK';
 // fetchBook Action creator
 export const fetchBook = (bookList) => ({ type: FETCH_BOOK, bookList });
 // Fetch book fuction.
-export const fetchBooks = () => async (dispatch) => {
+export const fetchBooks = createAsyncThunk(FETCH_BOOK, async (dispatch) => {
   await fetch(BASE_URL)
     .then((res) => res.json())
     .then((books) => {
@@ -24,7 +25,7 @@ export const fetchBooks = () => async (dispatch) => {
       });
       dispatch(fetchBook(bookList));
     });
-};
+});
 
 // Add book in API
 // Action
