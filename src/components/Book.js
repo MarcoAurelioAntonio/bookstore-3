@@ -16,23 +16,35 @@ function Book({ book, value }) {
   };
 
   return (
-    <div className="book-container">
-      <div className="info-div">
+    <div className="book-container flex">
+      <div className="info-div flex">
         <div className="book-info">
-          <p>{book.category}</p>
-          <h3>{book.title}</h3>
-          <p>{book.author}</p>
+          <p className="cat">{book.category}</p>
+          <h3 className="tit">{book.title}</h3>
+          <p className="aut">{book.author}</p>
         </div>
-        <div className="functions">
+        <div className="functions flex">
           <Comments />
           <span>|</span>
-          <button type="button" id={book.id} onClick={remBook}>Remove</button>
+          <button className="remove-btn" type="button" id={book.id} onClick={remBook}>Remove</button>
           <span>|</span>
           <Edit />
         </div>
       </div>
-      <div className="completed-div"><CircularStatic value={value} /></div>
-      <div className="progress-div">progress</div>
+      <div className="completed-div flex">
+        <CircularStatic value={value} />
+        <div className="sub-completed-div">
+          <p className="percentage">64%</p>
+          <p className="comp">Completed</p>
+        </div>
+      </div>
+      <div className="progress-div flex">
+        <div className="progress-div-1">
+          <p className="comp">CURRENT CHAPTER</p>
+          <p>Chapter 15</p>
+          <button className="update" type="button">UPDATE PROGRESS</button>
+        </div>
+      </div>
     </div>
   );
 }

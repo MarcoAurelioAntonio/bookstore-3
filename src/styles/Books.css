@@ -12,3 +12,8 @@
 .footer-empty {
   height: 200px;
 }
+
+.percentage {
+  font-size: 40px;
+  margin: -20px 0;
+}

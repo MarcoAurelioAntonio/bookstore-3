@@ -15,7 +15,7 @@ function Books() {
   return (
     <div className="book-list">
 
-      { books?.map((book) => <Book key={book.id} book={book} value={17} />)}
+      { books?.map((book) => <Book key={book.id} book={book} value={64} />)}
 
       <div className="footer-empty" />
     </div>

@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 .new-book-div {
   position: fixed;
   bottom: 0;
@@ -43,5 +46,11 @@
 }
 
 .submit {
+  font-family: inherit;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #0290ff;
   width: 100px;
+  cursor: pointer;
 }
